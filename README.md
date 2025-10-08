@@ -380,3 +380,9 @@ View database logs:
 ```bash
 docker-compose logs -f mysql
 ```
+
+# Note
+This project is inspired by and follows the guidelines from the [URL Shortening Service Roadmap](https://roadmap.sh/projects/url-shortening-service) on roadmap.sh.
+
+For a visual representation of the project structure and flow, you can refer to the following roadmap:
+https://roadmap.sh/projects/url-shortening-service
