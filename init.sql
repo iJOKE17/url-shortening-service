@@ -1,0 +1,13 @@
+CREATE DATABASE IF NOT EXISTS urlshortener;
+USE urlshortener;
+
+CREATE TABLE IF NOT EXISTS urls (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  original_url VARCHAR(2048) NOT NULL,
+  short_code VARCHAR(10) UNIQUE NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  clicks INT DEFAULT 0,
+  INDEX idx_short_code (short_code),
+  INDEX idx_created_at (created_at)
+);
